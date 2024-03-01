@@ -1,0 +1,577 @@
+{
+	"info": {
+		"_postman_id": "4dde9c9b-235f-4765-b5f2-46456441f03d",
+		"name": "API Restful Contas",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13332900"
+	},
+	"item": [
+		{
+			"name": "POST",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"dataVencimento\": \"2024-03-31\",\r\n    \"dataPagamento\": null,\r\n    \"valor\": 100.50,\r\n    \"descricao\": \"Pagamento da fatura da energia\",\r\n    \"situacao\": \"A_PAGAR\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/contas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"contas"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "POST",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"dataVencimento\": \"2024-03-31\",\r\n    \"dataPagamento\": null,\r\n    \"valor\": 100.50,\r\n    \"descricao\": \"Pagamento da fatura de internet\",\r\n    \"situacao\": \"A_PAGAR\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/contas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"contas"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 28 Feb 2024 22:35:21 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"idConta\": \"9c4ff3b6-4418-4231-8e6b-4fab0051ed06\",\n    \"dataVencimento\": \"2024-03-31\",\n    \"dataPagamento\": null,\n    \"valor\": 100.5,\n    \"descricao\": \"Pagamento da fatura de internet\",\n    \"situacao\": \"A_PAGAR\"\n}"
+				}
+			]
+		},
+		{
+			"name": "GET ALL",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/contas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"contas"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "GET ALL",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/contas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"contas"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 28 Feb 2024 22:43:41 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"idConta\": \"9c4ff3b6-4418-4231-8e6b-4fab0051ed06\",\n        \"dataVencimento\": \"2024-03-31\",\n        \"dataPagamento\": null,\n        \"valor\": 100.5,\n        \"descricao\": \"Pagamento da fatura de internet\",\n        \"situacao\": \"A_PAGAR\"\n    },\n    {\n        \"idConta\": \"08f39b10-612f-4b4f-be98-01bff35d0f04\",\n        \"dataVencimento\": \"2024-03-15\",\n        \"dataPagamento\": null,\n        \"valor\": 250.75,\n        \"descricao\": \"Pagamento do aluguel\",\n        \"situacao\": \"A_PAGAR\"\n    }\n]"
+				},
+				{
+					"name": "GET ALL AFTER UPDATE",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/contas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"contas"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 29 Feb 2024 00:10:53 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"idConta\": \"08f39b10-612f-4b4f-be98-01bff35d0f04\",\n        \"dataVencimento\": \"2024-03-15\",\n        \"dataPagamento\": null,\n        \"valor\": 250.75,\n        \"descricao\": \"Pagamento do aluguel\",\n        \"situacao\": \"A_PAGAR\"\n    },\n    {\n        \"idConta\": \"9c4ff3b6-4418-4231-8e6b-4fab0051ed06\",\n        \"dataVencimento\": \"2024-03-31\",\n        \"dataPagamento\": \"2024-02-28\",\n        \"valor\": 100.5,\n        \"descricao\": \"Pagamento da fatura de internet\",\n        \"situacao\": \"PAGO\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "GET ONE",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/contas/9c4ff3b6-4418-4231-8e6b-4fab0051ed06",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"contas",
+						"9c4ff3b6-4418-4231-8e6b-4fab0051ed06"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "GET ONE",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/contas/9c4ff3b6-4418-4231-8e6b-4fab0051ed06",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"contas",
+								"9c4ff3b6-4418-4231-8e6b-4fab0051ed06"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 28 Feb 2024 23:16:03 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"idConta\": \"9c4ff3b6-4418-4231-8e6b-4fab0051ed06\",\n    \"dataVencimento\": \"2024-03-31\",\n    \"dataPagamento\": null,\n    \"valor\": 100.5,\n    \"descricao\": \"Pagamento da fatura de internet\",\n    \"situacao\": \"A_PAGAR\"\n}"
+				}
+			]
+		},
+		{
+			"name": "UPDATE",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"dataVencimento\": \"2024-03-31\",\r\n    \"dataPagamento\": \"2024-02-28\",\r\n    \"valor\": 100.5,\r\n    \"descricao\": \"Pagamento da fatura de internet\",\r\n    \"situacao\": \"PAGO\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/contas/9c4ff3b6-4418-4231-8e6b-4fab0051ed06",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"contas",
+						"9c4ff3b6-4418-4231-8e6b-4fab0051ed06"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "UPDATE",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"dataVencimento\": \"2024-03-31\",\r\n    \"dataPagamento\": \"2024-02-28\",\r\n    \"valor\": 100.5,\r\n    \"descricao\": \"Pagamento da fatura de internet\",\r\n    \"situacao\": \"PAGO\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/contas/9c4ff3b6-4418-4231-8e6b-4fab0051ed06",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"contas",
+								"9c4ff3b6-4418-4231-8e6b-4fab0051ed06"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 29 Feb 2024 00:10:13 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"idConta\": \"9c4ff3b6-4418-4231-8e6b-4fab0051ed06\",\n    \"dataVencimento\": \"2024-03-31\",\n    \"dataPagamento\": \"2024-02-28\",\n    \"valor\": 100.5,\n    \"descricao\": \"Pagamento da fatura de internet\",\n    \"situacao\": \"PAGO\"\n}"
+				}
+			]
+		},
+		{
+			"name": "UPDATE STATUS",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"dataVencimento\": \"2024-03-31\",\r\n    \"dataPagamento\": \"2024-02-28\",\r\n    \"valor\": 100.5,\r\n    \"descricao\": \"Pagamento da fatura de internet\",\r\n    \"situacao\": \"PAGO\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/contas/9c4ff3b6-4418-4231-8e6b-4fab0051ed06",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"contas",
+						"9c4ff3b6-4418-4231-8e6b-4fab0051ed06"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "UPDATE STATUS",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"dataPagamento\": \"2024-02-28\",\r\n    \"situacao\": \"PAGO\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/contas/updateStatus/08f39b10-612f-4b4f-be98-01bff35d0f04",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"contas",
+								"updateStatus",
+								"08f39b10-612f-4b4f-be98-01bff35d0f04"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 29 Feb 2024 00:31:18 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"idConta\": \"08f39b10-612f-4b4f-be98-01bff35d0f04\",\n    \"dataVencimento\": \"2024-03-15\",\n    \"dataPagamento\": \"2024-02-28\",\n    \"valor\": 250.75,\n    \"descricao\": \"Pagamento do aluguel\",\n    \"situacao\": \"PAGO\"\n}"
+				}
+			]
+		},
+		{
+			"name": "DELETE",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"dataVencimento\": \"2024-03-31\",\r\n    \"dataPagamento\": \"2024-02-28\",\r\n    \"valor\": 100.5,\r\n    \"descricao\": \"Pagamento da fatura de internet\",\r\n    \"situacao\": \"PAGO\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/contas/ee512fbb-41a8-416b-b5df-11aee5fb0024",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"contas",
+						"ee512fbb-41a8-416b-b5df-11aee5fb0024"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "DELETE",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"dataVencimento\": \"2024-03-31\",\r\n    \"dataPagamento\": \"2024-02-28\",\r\n    \"valor\": 100.5,\r\n    \"descricao\": \"Pagamento da fatura de internet\",\r\n    \"situacao\": \"PAGO\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/contas/9c4ff3b6-4418-4231-8e6b-4fab0051ed06",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"contas",
+								"9c4ff3b6-4418-4231-8e6b-4fab0051ed06"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain;charset=UTF-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "26"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 29 Feb 2024 00:12:46 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "Conta deletada com sucesso"
+				}
+			]
+		}
+	]
+}
